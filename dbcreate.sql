@@ -14,9 +14,6 @@ CREATE TABLE ARTIST
     CONSTRAINT ARTIST_Email_UQ UNIQUE (artistEmail)
 );
 
-COMMIT;
-
-
 /* ===================== CURATOR ===================== */
 CREATE TABLE CURATOR (
     curatorID                 INT NOT NULL,
@@ -135,3 +132,5 @@ CREATE TABLE INVOICE
     CONSTRAINT INVOICE_Order_FK    FOREIGN KEY (orderID)    REFERENCES ORDERS(orderID),
     CONSTRAINT INVOICE_Supplier_FK FOREIGN KEY (supplierID) REFERENCES SUPPLIER(supplierID)
 );
+
+COMMIT;
